@@ -1,0 +1,146 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Sippy Fashions VietNam - Trang web chính thức</title>
+    <link rel="icon" href="image/icon.png" style="height:100px;width:100px">
+    <link rel="stylesheet" href="main.css"/>
+    <script src="background.js"></script>
+</head>
+<body onLoad="liveShow(),loadbottom(),chuchay11(),chuchay12(),chuchay21(),chuchay22(),chuchay31(),chuchay32(),chuchay41(),chuchay42(),chuyenut(),chuyenut2(),chuyenut3(),chuyenut4(),loadbo2(),create(),xxx(),showrasosp()">
+<div class="menu">
+    <ul>
+        <li><a href="shop.html" onMouseOver="thutra(this)" onMouseOut="thutvo(this)">      Sippy Shop</li>
+        <li><a href="shop.html" onMouseOver="thutra(this)" onMouseOut="thutvo(this)">      Womens</li>
+        <li><a href="shop.html" onMouseOver="thutra(this)" onMouseOut="thutvo(this)">      Mens</a></li>
+        <li><a href="shop.html" onMouseOver="thutra(this)" onMouseOut="thutvo(this)">      Kids</a></li>
+    </ul>
+</div>
+<div class="to">
+    <div id="ngoai">
+        <div class="anhxoc"></div>
+        <div>
+            <table style="height:80px;width:300px;position:absolute;top:25px;right:20px;z-index:3;color:#25ACDE">
+                <tr>
+                    <td style="width:180px;height:30px;font-size:13px;text-align:right;border-right:solid 1px gray"
+                        class="link"><a id="vip1"
+                                        href="#" onClick="dangnhap()">Sign In  </a>
+                        <p id="vip3" class="res">Hi <span id="vip31" style="color:#F00"></span></p></td>
+                    <td style="font-size:13px;width:90px" class="link"><a id="vip2" href="#" onClick="dangki()">  Register</a><a
+                            id="vip4" href="#" onClick="logout()">Sign Out</a></td>
+                    <td><a href="Order.html"><img src="image/cart-add-icon.png" style="height:30px;width:30px"></a><span id="xxxx"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="link"><input type="search"
+                                                        style="float:left;width:212px;height:25px;opacity:0.4; border-radius:3px;border:none;padding-left:7px;"
+                                                        placeholder="Nhập Từ Khóa Tìm Kiếm :)" id="searchbox"
+                                                        onMouseOver="searchbox()"
+                                                        onMouseOut="searchboxout()">
+                        <a href="#">
+                            <p style="float:left;line-height:30px">  SEARCH</p>
+                        </a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="div1">
+            <div id="div12">Boy Capsule</div>
+            <div id="div11">Autum Winter Kids /2017</div>
+        </div>
+        <div id="div2">
+            <div id="div22">70's mood</div>
+            <div id="div21">Autum Winter Women /2017</div>
+        </div>
+        <div id="div3">
+            <div id="div32">UBAN BEATS</div>
+            <div id="div31">Autum Winter Colection /2017</div>
+        </div>
+        <div id="div4">
+            <div id="div42">This is_ denim</div>
+            <div id="div41">Autum Winter Man /2017</div>
+        </div>
+        <div id="trong"><img class="thuy" src="image/desktop-imgbacktoschoold.st.jpg"> <img class="thuy"
+                                                                                            src="image/desktop-imgseventiesmoodd.st.jpg">
+            <img class="thuy" src="image/en-collection-program-2.st.jpg"> <img class="thuy"
+                                                                               src="image/desktop-imgpiecesd.st.jpg">
+        </div>
+        <div class="anhxoc2"></div>
+        <div id="loadbotom"></div>
+        <div id="loadbotomlan1"></div>
+    </div>
+    <div class="bottom">
+        <div class="bottom2">
+      <pre class="footer"><p style="line-height:100%;font-size:12px"></p>
+    				SIPPY THP  |  </pre>
+            <div><img src="image/volute.png" class="icon"></div>
+        </div>
+        <div class="boxmenu"></div>
+        <div class="boxmenu2"><a href="index.html"><img src="image/Sippy-logo.png"
+                                                        style="height:190px;width:250px;position:absolute;left:-100px;top:-340px"></a>
+        </div>
+    </div>
+</div>
+<div id="dangki" style="position:absolute;width:0px;height:0px;overflow:hidden;top:0px;left:0px;z-index:50">
+    <div id="to">
+        <div id="nho"
+             style="position:absolute;width:100%;height:100%;background-color:#000;top:0px;left:0px;z-index:50;opacity:0.6"></div>
+        <form id="account" style="position:relative;z-index:51;background:white;" name="regisform" method="post">
+            <span onClick="exitdangki()" id="close">&times;</span>
+            <div id="header">
+                <center>
+                    Creat An Account
+                </center>
+            </div>
+            <div id="body">
+                <div id="email">
+                    <label><strong>EMAIL ADDRESS</strong></label>
+                    <input type="text" name="email" required/>
+                    <span class="error" id="c1"></span></div>
+                <div id="pass">
+                    <label><b>PASSWORD</b></label>
+                    <input type="password" name="password" required/>
+                    <span class="error" id="c2"></span></div>
+                <div id="confirm">
+                    <label><b>CONFIRM PASSWORD</b></label>
+                    <input type="password" name="password2" required/>
+                    <span class="error" id="c3"></span></div>
+                <center>
+                    Must be at least 8 characters long and is case sensitive.
+                </center>
+                <button type="submit" id="submitres" onClick="return checkRegis()">CREATE ACCOUNT</button>
+                <p>By creating an account, you is a member of Sippy</p>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="dangnhap" style="position:absolute;width:0px;height:0px;overflow:hidden;top:0px;left:0px;z-index:50">
+    <div id="to">
+        <div id="nho"
+             style="position:absolute;width:100%;height:100%;background-color:#000;top:0px;left:0px;z-index:50;opacity:0.6"></div>
+        <form id="signIn" style="position:relative;z-index:51;background:white;" method="post" name="lgform">
+            <span onClick="exitdangnhap()" id="close">&times;</span>
+            <div id="header">
+                <center>
+                    Sign In
+                </center>
+            </div>
+            <div id="body">
+                <div id="email">
+                    <label><b>EMAIL ADDRESS</b></label>
+                    <input type="text" name="email" id="emailx" required/>
+                    <span class="error" id="lg1"></span></div>
+                <div id="pass22">
+                    <label><b>PASSWORD</b></label>
+                    <br>
+                    <input type="password" name="password" id="passx" required/>
+                    <span class="error" id="lg2"></span></div>
+                <center>
+                    Must be at least 8 characters long and is case sensitive.
+                </center>
+                <button type="submit" id="submitres" onClick="return login()">SIGN IN</button>
+                <p style="text-align:center">Don't Have An Account?<a href="#" onClick="exitdangnhap(),dangki()">CREATE
+                    ACCOUNT</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

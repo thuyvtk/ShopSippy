@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="image/icon.png" style="height:100px;width:100px">
+<title>Sippy || Thông tin giỏ hàng</title>
+<script src="DemoProduct.js"></script>
+<script src="background.js"></script>
+<link href="Order.css" type="text/css" rel="stylesheet"/>
+<link href="test.css" type="text/css" rel="stylesheet"/>
+<script src="shop.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+</head>
+
+<body onload="create(),show2(),khoitao(),banner()">
+<!--top-- hien thi thong tin ben goc phai (Hi cao van phu)-->
+	<div id="mySidenav" class="sidenav"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h2>SEARCH</h2>
+  <input type="input" placeholder="Search here">
+</div>
+<!-- SLIDE NAVI SEARCH  -->
+    <div id="mySidenav" class="sidenav">
+        <a class="closebtn" onclick="closeNav(),create(),khoitao()">&times;</a>
+        <h2>SEARCH</h2>
+        <input type="input" placeholder="Search here">
+    </div>
+    <!--BEGIN HEADER-->
+    <div id="free">
+        <div class="text">FREE DELIVERY & FREE RETURNS</div>
+        <div class="nearest">FIND YOUR NEAREST STORE</div>
+    </div>
+    <div id="top">
+  <div id="top2"> <a id="vip2" href="#" onClick="dangki()">Register</a> <a id="vip4" href="#" onClick="logout()">Sign Out</a> </div>
+  <div id="top1"> <a id="vip1"href="#" onClick="dangnhap()">            Sign In</a>
+    <p id="vip3" class="res">Hi <span id="vip31" style="color:#F00"></span></p>
+  </div>
+</div>
+    <div id="header" class="loai1">
+        <div id="header-logo">
+            <a href="index.html" class="logo">SIPPY</a>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="shop.html">MENS</a></li>
+                <li><a href="shop.html">WOMENS</a></li>
+                <li><a href="shop.html">KIDS</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+            </ul>
+        </div>
+        <div id="cart"><a href="Order.html"><span style="position: absolute;left: 25px; top: 8px; font-size: 15px;">MY BAG</span></a></div>
+        <button id="search" onclick="openNav()"><span>SEARCH</span></button>
+    </div>
+    <!--END HEADER-->
+<div class="banner">
+            	<div id="bannertrong">
+             		<img src="image/img3.png"/>
+                    <img src="image/img2.png"/>
+                    <img src="image/img1.png"/>
+                </div>
+            </div>
+<h2>
+MY SHOPPING CART
+</h3>
+<div id="d1"></div>
+<div style="float:left;height:280px;width:350px;margin-left:30px;color:#777777;overflow:hidden;border:solid 1px #DCDCDC;
+	border-radius:2px;box-shadow:1px 1px 1px 0px #DCDCDC;">
+  <div style="float:left;width:100%;height:50px;border-bottom:solid 1px #DCDCDC;padding-left:20px;line-height:50px;overflow:hidden;"><b style="color: #FF8000">THÔNG TIN CHUNG</b></div>
+  <div id="d2" style="float:left;width:300px;height:115px;border-bottom:solid 1px #DCDCDC;margin-left:20px;text-align:left;"></div>
+  <div id="d3" style="float:left;width:300px;height:115px;border-bottom:solid 1px #DCDCDC;margin-left:20px;text-align:left;"></div>
+</div>
+<div id="dangki" style="position:absolute;width:0px;height:0px;overflow:hidden;top:0px;left:0px;z-index:50">
+    <div id="to">
+        <div id="nho"
+             style="position:absolute;width:100%;height:100%;background-color:#000;top:0px;left:0px;z-index:50;opacity:0.6"></div>
+        <form id="account" style="position:relative;z-index:51;background:white;" name="regisform" method="post">
+            <span onClick="exitdangki()" id="close">&times;</span>
+            <div id="headerx">
+                <center>
+                    Creat An Account
+                </center>
+            </div>
+            <div id="bodyx">
+                <div id="email">
+                    <label><strong>EMAIL ADDRESS</strong></label>
+                    <input type="text" name="email" required/>
+                    <span class="error" id="c1"></span></div>
+                <div id="pass">
+                    <label><b>PASSWORD</b></label>
+                    <input type="password" name="password" required/>
+                    <span class="error" id="c2"></span></div>
+                <div id="confirm">
+                    <label><b>CONFIRM PASSWORD</b></label>
+                    <input type="password" name="password2" required/>
+                    <span class="error" id="c3"></span></div>
+                <center>
+                    Must be at least 8 characters long and is case sensitive.
+                </center>
+                <button type="submit" id="submitres" onClick="return checkRegis()">CREATE ACCOUNT</button>
+                <p>By creating an account, you is a member of Sippy</p>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="dangnhap" style="position:absolute;width:0px;height:0px;overflow:hidden;top:0px;left:0px;z-index:50">
+    <div id="to">
+        <div id="nho"
+             style="position:absolute;width:100%;height:100%;background-color:#000;top:0px;left:0px;z-index:50;opacity:0.6"></div>
+        <form id="signIn" style="position:relative;z-index:51;background:white;" method="post" name="lgform">
+            <span onClick="exitdangnhap()" id="close">&times;</span>
+            <div id="headerx">
+                <center>
+                    Sign In
+                </center>
+            </div>
+            <div id="bodyx">
+                <div id="email">
+                    <label><b>EMAIL ADDRESS</b></label>
+                    <input type="text" name="email" id="emailx" required/>
+                    <span class="error" id="lg1"></span></div>
+                <div id="pass22">
+                    <label><b>PASSWORD</b></label>
+                    <br>
+                    <input type="password" name="password" id="passx" required/>
+                    <span class="error" id="lg2"></span></div>
+                <center>
+                    Must be at least 8 characters long and is case sensitive.
+                </center>
+                <button type="submit" id="submitres" onClick="return login()">SIGN IN</button>
+                <p style="text-align:center">Don't Have An Account?<a href="#" onClick="exitdangnhap(),dangki()">CREATE
+                    ACCOUNT</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
